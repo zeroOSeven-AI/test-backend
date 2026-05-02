@@ -1,35 +1,26 @@
 /**
  * 📄 types.ts
- * Shared utility types & Canonical Enforcements
+ * Shared utility types (minimal, non-overlapping primitives)
  */
-
-import { SPORT_TYPES, ENTITY_TYPES, EVENT_STATUSES } from "./constants";
-
-/**
- * 🎯 CANONICAL ENFORCEMENTS
- * Izvlačimo stroge tipove iz konstanti (Single Source of Truth)
- */
-export type SportType = typeof SPORT_TYPES[number];
-export type EntityType = typeof ENTITY_TYPES[number];
-export type EventStatus = typeof EVENT_STATUSES[number];
 
 /**
  * Global ID type for all core entities/events/content.
+ * Keep flexible for Supabase (string) + internal systems (number).
  */
 export type ID = string | number;
 
 /**
- * Nullable = value can explicitly be null
+ * Nullable = value can explicitly be null (DB / API optional null state)
  */
 export type Nullable<T> = T | null;
 
 /**
- * Optional = value may be omitted entirely
+ * Optional = value may be omitted entirely (undefined in JS sense)
  */
 export type Optional<T> = T | undefined;
 
 /**
- * Utility for fields that may be missing OR explicitly null
+ * Utility for fields that may be missing OR explicitly null (common in APIs)
  */
 export type Maybe<T> = T | null | undefined;
 
@@ -41,6 +32,7 @@ export interface Identifiable {
 }
 
 /**
- * Unified timestamp format.
+ * Unified timestamp format across system boundaries.
+ * Use string (ISO) as primary, number only for internal optimization layers.
  */
 export type Timestamp = string | number;
