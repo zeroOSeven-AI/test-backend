@@ -1,44 +1,33 @@
 import { z } from "zod";
 
-export const ApiFootballEventSchema = z.object({
+const toNumber = z.preprocess((v) => {
+    if (typeof v === "string") {
+        const n = Number(v.trim());
+        return Number.isFinite(n) ? n : undefined;
+    }
+    return typeof v === "number" ? v : undefined;
+}, z.number().optional());
+
+const cleanString = z.preprocess((v) =>
+    typeof v === "string" ? v.trim() : undefined,
+    z.string().optional()
+);
+
+export const ApiFootballItemZod = z.object({
     fixture: z.object({
-        id: z.number(),
-        date: z.string(),
-        status: z.object({
-            short: z.string()
-        }),
-        timestamp: z.number(),
-        venue: z.object({
-            name: z.string().nullable()
-        }).nullable()
-    }),
-
+        id: toNumber,
+        date: cleanString,
+        timestamp: toNumber,
+        status: z.object({ short: cleanString }).optional(),
+        venue: z.object({ name: cleanString }).optional()
+    }).passthrough().optional(),
     teams: z.object({
-        home: z.object({
-            id: z.number(),
-            name: z.string()
-        }),
-        away: z.object({
-            id: z.number(),
-            name: z.string()
-        })
-    }),
-
-    goals: z.object({
-        home: z.number().nullable(),
-        away: z.number().nullable()
-    }).nullable(),
-
+        home: z.object({ id: toNumber, name: cleanString }).passthrough().optional(),
+        away: z.object({ id: toNumber, name: cleanString }).passthrough().optional()
+    }).optional(),
+    goals: z.object({ home: toNumber, away: toNumber }).optional(),
     score: z.object({
-        penalty: z.object({
-            home: z.number().nullable(),
-            away: z.number().nullable()
-        }).nullable()
-    }).nullable(),
-
-    league: z.object({
-        id: z.number(),
-        name: z.string(),
-        country: z.string()
-    })
-});
+        penalty: z.object({ home: toNumber, away: toNumber }).optional()
+    }).optional(),
+    events: z.array(z.any()).optional()
+}).passthrough();
