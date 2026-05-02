@@ -1,4 +1,6 @@
+// src/processor/entityResolver.ts
 export class EntityResolver {
+    // U realnom sustavu, ovo je tvoja baza (Postgres/Redis)
     private store = new Map<string, number>();
     private lastId = 0;
 
