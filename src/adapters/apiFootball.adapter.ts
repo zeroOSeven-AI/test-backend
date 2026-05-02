@@ -1,53 +1,49 @@
-import { ApiFootballEventSchema } from "./apiFootball.schema";
+import { SportType } from "../../core/contract/entity";
+import { ApiFootballItemZod } from "./apiFootball.schema";
 
 export class ApiFootballAdapter {
-    public normalize(raw: any) {
-        // 🧯 SAFE UNWRAP (ovo ti nedostaje)
-        const event =
-            raw?.fixture ? raw :
-                raw?.event ? raw.event :
-                    raw?.payload ? raw.payload :
-                        raw;
+    private readonly provider = "api-football";
+    private readonly sport: SportType = "football";
 
-        const parsed = ApiFootballEventSchema.parse(event);
+    normalize(raw: any) {
+        const entities: any[] = [];
+        const events: any[] = [];
 
-        const home = parsed.teams.home;
-        const away = parsed.teams.away;
+        if (!raw?.response || !Array.isArray(raw.response)) return { entities, events };
 
+        for (const item of raw.response) {
+            const parsed = ApiFootballItemZod.safeParse(item);
+            if (!parsed.success) continue;
+
+            const data = parsed.data;
+
+            // 🚫 HARD GUARD: Nema meča bez ID-a i oba tima
+            if (!data.fixture?.id || !data.teams?.home?.id || !data.teams?.away?.id) continue;
+
+            entities.push(this.mapTeam(data.teams.home, data));
+            entities.push(this.mapTeam(data.teams.away, data));
+
+            entities.push({
+                provider: this.provider,
+                type: "match",
+                externalId: String(data.fixture.id),
+                sport: this.sport,
+                payload: data
+            });
+        }
+        return { entities, events };
+    }
+
+    private mapTeam(team: any, context: any) {
         return {
-            id: parsed.fixture.id,
-            type: "match",
-            sport: "football",
-            source: "api-football",
-            status: parsed.fixture.status.short,
-
-            startTime: parsed.fixture.date,
-
-            competitors: [home.id, away.id],
-
-            score: {
-                fulltime: {
-                    home: parsed.goals?.home ?? 0,
-                    away: parsed.goals?.away ?? 0
-                },
-                penalties: {
-                    home: parsed.score?.penalty?.home ?? null,
-                    away: parsed.score?.penalty?.away ?? null
-                }
-            },
-
-            metadata: {
-                venue: parsed.fixture.venue?.name ?? null,
-                league: parsed.league,
-                provider: "api-football"
-            },
-
-            sequenceId: parsed.fixture.timestamp,
-
-            fingerprint: `api-football:event:${parsed.fixture.id}`,
-
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString()
+            provider: this.provider,
+            type: "team",
+            externalId: team.id ? String(team.id) : null,
+            sport: this.sport,
+            payload: {
+                name: team.name || "Unknown Team",
+                country: context?.league?.country ?? null
+            }
         };
     }
 }
