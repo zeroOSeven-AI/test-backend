@@ -1,60 +1,41 @@
-import { ID, SportType, EntityType, Timestamp, Nullable } from "./types";
 
 /**
- * Canonical Entity Model (GLOBAL ID SYSTEM)
- *
- * ⚠️ Source of truth: INTERNAL ID
- * ⚠️ Provider IDs su SAMO u mappings
+ * 🧩 1.1 ENTITY MODEL (GLOBAL ID SYSTEM)
+ * Source of truth: Internal VYRA ID
  */
+
+export type EntityType = "team" | "driver" | "match" | "race" | "player";
+export type SportType = "football" | "f1" | "motogp" | "nba" | "tennis";
+
 export interface Entity {
-    /**
-     * Internal system ID (primary key, not provider ID)
-     */
-    id: ID;
-
-    /**
-     * Entity type (team, player, driver, match reference, etc.)
-     */
+    id: number;                // internal VYRA ID (source of truth)
     type: EntityType;
-
-    /**
-     * Sport domain this entity belongs to
-     */
     sport: SportType;
 
-    /**
-     * Display name
-     */
     name: string;
+    shortName?: string;
+    country?: string;
 
-    /**
-     * Optional short name / abbreviation
-     */
-    shortName: Nullable<string>;
-
-    /**
-     * Optional country metadata
-     */
-    country: Nullable<string>;
-
-    /**
-     * External provider mappings
-     * NEVER used for identity, only for resolution layer
-     *
-     * Example:
-     * {
-     *   "api-football": "33",
-     *   "optasports": "t12"
-     * }
-     */
     mappings: Record<string, string>;
 
-    /**
-     * Deterministic identity key for deduplication
-     * MUST be stable across ingestion runs
-     */
     fingerprint: string;
 
-    createdAt: Timestamp;
-    updatedAt: Timestamp;
-}
+    createdAt: string;
+    updatedAt: string;
+};
+
+export type Event = {
+    id: number;
+    sport: "football";
+    status: string;
+
+    startTime: string;
+
+    competitors: number[];
+
+    metadata: any;
+
+    sequenceId: number;
+
+    updatedAt: string;
+};
