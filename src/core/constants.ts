@@ -15,16 +15,10 @@ export const ENTITY_TYPES = [
     "content",
 ] as const;
 
-// 🔥 Ovo mora odgovarati mapperu
 export const EVENT_STATUSES = [
-    "not_started",
-    "first_half",
-    "halftime",
-    "second_half",
-    "extra_time",
-    "penalties",
+    "scheduled",
+    "live",
     "finished",
-    "postponed",
+    "delayed",
     "cancelled",
-    "unknown"
 ] as const;
