@@ -1,0 +1,470 @@
+{
+  "entities": [
+    {
+      "id": 1,
+      "type": "team",
+      "sport": "football",
+      "name": "Burnley",
+      "mappings": {
+        "api-football": "44"
+      },
+      "fingerprint": "api-football:team:44",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 2,
+      "type": "team",
+      "sport": "football",
+      "name": "Manchester City",
+      "mappings": {
+        "api-football": "50"
+      },
+      "fingerprint": "api-football:team:50",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 3,
+      "type": "team",
+      "sport": "football",
+      "name": "Arsenal",
+      "mappings": {
+        "api-football": "42"
+      },
+      "fingerprint": "api-football:team:42",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 4,
+      "type": "team",
+      "sport": "football",
+      "name": "Nottingham Forest",
+      "mappings": {
+        "api-football": "65"
+      },
+      "fingerprint": "api-football:team:65",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 5,
+      "type": "team",
+      "sport": "football",
+      "name": "Bournemouth",
+      "mappings": {
+        "api-football": "35"
+      },
+      "fingerprint": "api-football:team:35",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 6,
+      "type": "team",
+      "sport": "football",
+      "name": "West Ham",
+      "mappings": {
+        "api-football": "48"
+      },
+      "fingerprint": "api-football:team:48",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 7,
+      "type": "team",
+      "sport": "football",
+      "name": "Everton",
+      "mappings": {
+        "api-football": "45"
+      },
+      "fingerprint": "api-football:team:45",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 8,
+      "type": "team",
+      "sport": "football",
+      "name": "Fulham",
+      "mappings": {
+        "api-football": "36"
+      },
+      "fingerprint": "api-football:team:36",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 9,
+      "type": "team",
+      "sport": "football",
+      "name": "Brighton",
+      "mappings": {
+        "api-football": "51"
+      },
+      "fingerprint": "api-football:team:51",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 10,
+      "type": "team",
+      "sport": "football",
+      "name": "Luton",
+      "mappings": {
+        "api-football": "1359"
+      },
+      "fingerprint": "api-football:team:1359",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 11,
+      "type": "team",
+      "sport": "football",
+      "name": "Sheffield Utd",
+      "mappings": {
+        "api-football": "62"
+      },
+      "fingerprint": "api-football:team:62",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 12,
+      "type": "team",
+      "sport": "football",
+      "name": "Crystal Palace",
+      "mappings": {
+        "api-football": "52"
+      },
+      "fingerprint": "api-football:team:52",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 13,
+      "type": "team",
+      "sport": "football",
+      "name": "Newcastle",
+      "mappings": {
+        "api-football": "34"
+      },
+      "fingerprint": "api-football:team:34",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 14,
+      "type": "team",
+      "sport": "football",
+      "name": "Aston Villa",
+      "mappings": {
+        "api-football": "66"
+      },
+      "fingerprint": "api-football:team:66",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 15,
+      "type": "team",
+      "sport": "football",
+      "name": "Brentford",
+      "mappings": {
+        "api-football": "55"
+      },
+      "fingerprint": "api-football:team:55",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 16,
+      "type": "team",
+      "sport": "football",
+      "name": "Tottenham",
+      "mappings": {
+        "api-football": "47"
+      },
+      "fingerprint": "api-football:team:47",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    }
+  ],
+  "events": [
+    {
+      "id": 1035037,
+      "type": "match",
+      "sport": "football",
+      "source": "api-football",
+      "status": "finished",
+      "startTime": "2023-08-11T19:00:00+00:00",
+      "competitors": [
+        1,
+        2
+      ],
+      "score": {
+        "fulltime": {
+          "home": 0,
+          "away": 3
+        },
+        "penalties": {
+          "home": null,
+          "away": null
+        }
+      },
+      "metadata": {
+        "venue": "Turf Moor",
+        "league": {
+          "id": 39,
+          "name": "Premier League",
+          "country": "England"
+        }
+      },
+      "sequenceId": 1691780400,
+      "fingerprint": "api-football:event:1035037",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 1035038,
+      "type": "match",
+      "sport": "football",
+      "source": "api-football",
+      "status": "finished",
+      "startTime": "2023-08-12T11:30:00+00:00",
+      "competitors": [
+        3,
+        4
+      ],
+      "score": {
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "penalties": {
+          "home": null,
+          "away": null
+        }
+      },
+      "metadata": {
+        "venue": "Emirates Stadium",
+        "league": {
+          "id": 39,
+          "name": "Premier League",
+          "country": "England"
+        }
+      },
+      "sequenceId": 1691839800,
+      "fingerprint": "api-football:event:1035038",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 1035039,
+      "type": "match",
+      "sport": "football",
+      "source": "api-football",
+      "status": "finished",
+      "startTime": "2023-08-12T14:00:00+00:00",
+      "competitors": [
+        5,
+        6
+      ],
+      "score": {
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "penalties": {
+          "home": null,
+          "away": null
+        }
+      },
+      "metadata": {
+        "venue": "Vitality Stadium",
+        "league": {
+          "id": 39,
+          "name": "Premier League",
+          "country": "England"
+        }
+      },
+      "sequenceId": 1691848800,
+      "fingerprint": "api-football:event:1035039",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 1035041,
+      "type": "match",
+      "sport": "football",
+      "source": "api-football",
+      "status": "finished",
+      "startTime": "2023-08-12T14:00:00+00:00",
+      "competitors": [
+        7,
+        8
+      ],
+      "score": {
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "penalties": {
+          "home": null,
+          "away": null
+        }
+      },
+      "metadata": {
+        "venue": "Goodison Park",
+        "league": {
+          "id": 39,
+          "name": "Premier League",
+          "country": "England"
+        }
+      },
+      "sequenceId": 1691848800,
+      "fingerprint": "api-football:event:1035041",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 1035040,
+      "type": "match",
+      "sport": "football",
+      "source": "api-football",
+      "status": "finished",
+      "startTime": "2023-08-12T14:00:00+00:00",
+      "competitors": [
+        9,
+        10
+      ],
+      "score": {
+        "fulltime": {
+          "home": 4,
+          "away": 1
+        },
+        "penalties": {
+          "home": null,
+          "away": null
+        }
+      },
+      "metadata": {
+        "venue": "The American Express Community Stadium",
+        "league": {
+          "id": 39,
+          "name": "Premier League",
+          "country": "England"
+        }
+      },
+      "sequenceId": 1691848800,
+      "fingerprint": "api-football:event:1035040",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 1035042,
+      "type": "match",
+      "sport": "football",
+      "source": "api-football",
+      "status": "finished",
+      "startTime": "2023-08-12T14:00:00+00:00",
+      "competitors": [
+        11,
+        12
+      ],
+      "score": {
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "penalties": {
+          "home": null,
+          "away": null
+        }
+      },
+      "metadata": {
+        "venue": "Bramall Lane",
+        "league": {
+          "id": 39,
+          "name": "Premier League",
+          "country": "England"
+        }
+      },
+      "sequenceId": 1691848800,
+      "fingerprint": "api-football:event:1035042",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 1035043,
+      "type": "match",
+      "sport": "football",
+      "source": "api-football",
+      "status": "finished",
+      "startTime": "2023-08-12T16:30:00+00:00",
+      "competitors": [
+        13,
+        14
+      ],
+      "score": {
+        "fulltime": {
+          "home": 5,
+          "away": 1
+        },
+        "penalties": {
+          "home": null,
+          "away": null
+        }
+      },
+      "metadata": {
+        "venue": "St. James' Park",
+        "league": {
+          "id": 39,
+          "name": "Premier League",
+          "country": "England"
+        }
+      },
+      "sequenceId": 1691857800,
+      "fingerprint": "api-football:event:1035043",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    },
+    {
+      "id": 1035044,
+      "type": "match",
+      "sport": "football",
+      "source": "api-football",
+      "status": "finished",
+      "startTime": "2023-08-13T13:00:00+00:00",
+      "competitors": [
+        15,
+        16
+      ],
+      "score": {
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "penalties": {
+          "home": null,
+          "away": null
+        }
+      },
+      "metadata": {
+        "venue": "Gtech Community Stadium",
+        "league": {
+          "id": 39,
+          "name": "Premier League",
+          "country": "England"
+        }
+      },
+      "sequenceId": 1691931600,
+      "fingerprint": "api-football:event:1035044",
+      "createdAt": "2026-05-01T15:55:09.744Z",
+      "updatedAt": "2026-05-01T15:55:09.744Z"
+    }
+  ]
+}
